@@ -1,0 +1,94 @@
+$fontSize: 18px;
+$paddingList: 2.5px 10px 2.5px 10px;
+$marginList: 2.5px 0 7px 0;
+
+
+.data {
+    font-size: $fontSize;
+    margin-bottom: 5px;
+}
+
+.temp_day {
+    font-size: $fontSize;
+}
+
+.HourAndList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 10px;
+    box-shadow: 22px 3px 8px -11px rgba(34, 60, 80, 0.2);
+
+    .span {
+
+        box-shadow: -22px 3px 8px -11px rgba(34, 60, 80, 0.2);
+    }
+
+    .list {}
+}
+
+.hour {
+    font-size: $fontSize;
+    display: flex;
+    padding: $paddingList;
+    margin: $marginList;
+    animation: hour-out 0.2s ease-out forwards;
+    position: relative;
+
+    &:hover {
+        animation: hour-in 0.5s linear infinite;
+        animation-direction: alternate;
+    }
+}
+
+
+@keyframes hour-in {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: -5px;
+    }
+}
+
+@keyframes hour-out {
+    0% {
+        top: -5px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.temp_hour {
+    font-size: $fontSize;
+    padding: $paddingList;
+    margin: $marginList;
+}
+
+.wind {
+    font-size: $fontSize;
+    padding: $paddingList;
+    margin: $marginList;
+}
+
+.humidity {
+    font-size: $fontSize;
+    padding: $paddingList;
+    margin: $marginList;
+}
+
+.snow {
+    font-size: $fontSize;
+    padding: $paddingList;
+    margin: $marginList;
+}
+
+.rain {
+    font-size: $fontSize;
+    padding: $paddingList;
+    margin: $marginList;
+}

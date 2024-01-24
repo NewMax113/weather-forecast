@@ -1,0 +1,151 @@
+.hour {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        position: relative;
+        display: flex;
+
+        >button {
+            font-size: 24px;
+            padding: 5px 16px;
+            border-bottom: 1px solid black;
+            margin-top: 4%;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .arrowOn {
+            &::after {
+                content: '';
+                position: absolute;
+                width: 8px;
+                border-bottom: 1px solid black;
+                transform: rotate(325deg);
+                right: 0;
+                margin-right: 6px;
+                margin-top: 20px;
+                pointer-events: none;
+                animation: beforeArrow 0.3s linear 1 forwards;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 8px;
+                border-bottom: 1px solid black;
+                transform: rotate(35deg);
+                right: 0;
+                margin-top: 20px;
+                pointer-events: none;
+                animation: afterArrow 0.3s linear 1 forwards;
+            }
+        }
+
+        .arrowOff {
+            &::after {
+                content: '';
+                position: absolute;
+                width: 8px;
+                border-bottom: 1px solid black;
+                transform: rotate(35deg);
+                right: 0;
+                margin-right: 6px;
+                margin-top: 20px;
+                pointer-events: none;
+                animation: afterArrow 0.3s linear 1 forwards;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 8px;
+                border-bottom: 1px solid black;
+                transform: rotate(325deg);
+                right: 0;
+                margin-top: 20px;
+                pointer-events: none;
+                animation: beforeArrow 0.3s linear 1 forwards;
+            }
+        }
+    }
+
+
+    .weatherDay {
+        cursor: default;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background-color: white;
+        margin-top: 52px;
+        border-radius: 10px;
+        left: 0;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border: 3px solid rgb(212, 212, 212);
+        z-index: 1;
+
+        //box-shadow: 4px 4px 41px -1px rgba(34, 60, 80, 0.2);
+        button {
+            margin-top: 10px;
+            font-size: 18px;
+            padding: 5px;
+            border: 1px solid rgb(212, 212, 212);
+        }
+
+    }
+
+    .weatherDayDis {
+        display: none;
+    }
+
+}
+
+
+.modalVisible {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 425px;
+    height: 325px;
+    background: white;
+    padding: 30px;
+    border-bottom: 2px solid gray;
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+    margin-bottom: 20px;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    background-color: #121212;
+    color: white;
+    z-index: 2;
+    animation: modalOn 0.3s linear 1 forwards;
+    font-style: italic;
+
+    span {
+        cursor: pointer;
+    }
+
+    div {
+        cursor: default;
+    }
+
+}
+
+.modalVisibleDis {
+    display: none;
+}
+
+@keyframes modalOn {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,26 @@
+.block_search {
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    .search_city {
+        background: white;
+        width: inherit;
+        margin: 5px 5px 5px 0;
+        font-size: 20px;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+
+    .btn_search_city {
+        background: white;
+        margin: 5px;
+        font-size: 20px;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+}

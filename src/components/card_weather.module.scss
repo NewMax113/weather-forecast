@@ -1,0 +1,40 @@
+.position_card {
+    width: 450px;
+    height: 600px;
+    border: 2px solid rgb(212, 212, 212);
+    border-radius: 82px;
+    position: absolute;
+    margin-top: -300px;
+    margin-left: -225px;
+    left: 50%;
+    top: 50%;
+    padding: 40px 30px;
+    box-shadow: 4px 4px 41px -1px rgba(34, 60, 80, 0.2);
+    background: white;
+
+    .head {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+
+        img {
+            width: 200px;
+        }
+
+        .city {
+            font-size: 40px;
+        }
+
+        .temp {
+            font-size: 30px;
+        }
+
+        .wind {
+            font-size: 18px;
+        }
+    }
+}
+
+
+
